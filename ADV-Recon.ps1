@@ -383,12 +383,7 @@ Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Pos
 
 ############################################################################################################################################################
 
-# Obtener la ruta del escritorio del usuario actual
-# Define la ruta del archivo y su contenido
-$rutaArchivo = "$env:UserProfile\Desktop\archivo.txt"
-
-# Guarda el contenido en el archivo
-$FileName | Out-File -FilePath $rutaArchivo -Encoding utf8
+$env:TMP\$FileName >> "$env:UserProfile\Desktop\archivo.txt"
 
 <#
 
